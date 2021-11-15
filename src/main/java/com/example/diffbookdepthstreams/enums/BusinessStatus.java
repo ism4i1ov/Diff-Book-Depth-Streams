@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public enum BusinessStatus {
     DEFAULT_SUCCESS(0, "Successfully processed!", BusinessStatusType.SUCCESS),
-    INCORRECT_MILLISECOND(-2, "Input millisecond is incorrect, millisecond must be one of 100, 250 or 500. Send in path variable", BusinessStatusType.SUCCESS),
+    INCORRECT_MILLISECOND(-2, "Input millisecond is incorrect, millisecond must be one of 100, 250 or 500. Send in path variable", BusinessStatusType.BAD_REQUEST),
     INTERNAL_ERROR(-1, "Error, please try again!", BusinessStatusType.ERROR);
 
     private final Integer statusId;
